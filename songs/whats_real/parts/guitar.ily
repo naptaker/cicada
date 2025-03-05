@@ -10,7 +10,7 @@
 }
 
 \gridPutMusic "guitar" 3 \relative c {
-  <>_\markup { \tiny "l'ultima" }
+  <>_\markup { \teeny "l'ultima volta, col pedale fuzz" }
   \repeat volta 2 {
     \include "notes/guitar-A.ily"
   }

@@ -14,6 +14,9 @@
 
 \setOption naptaker.guitar-tabs ##f
 \setOption naptaker.guitar-tuning #guitar-tuning
+#(set! paper-alist (cons '("henle" . (cons (* 23.5 cm ) (* 31 cm))) paper-alist))
+\setOption naptaker.paper-size "henle"
+\setOption naptaker.paper-orientation #'portrait
 \setOption naptaker.staff-size #18
 %% \setOption naptaker.extra-layout \layout {
 %%   \override FretBoards.FretBoard.size = #'1.3
@@ -33,6 +36,7 @@ global = { \Tempo \defaultTimeSignature \time 4/4 }
   %% poet      = "Andrew Smith"
   arranger  = "Naptaker"
   copyright = "© 2025 Eric Bailey"
+  %% tagline   = ##f
 }
 
 
@@ -42,8 +46,8 @@ pageNumberColor = #(if (defined? 'pageNumberColor) pageNumberColor black)
 
 
 \paper {
-  two-sided = ##t
-  print-first-page-number = ##t
+  two-sided = ##f
+  print-first-page-number = ##f
 
   evenHeaderMarkup = \markup {
     \column {

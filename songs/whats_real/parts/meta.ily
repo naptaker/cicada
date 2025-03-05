@@ -15,11 +15,9 @@
 
 \gridPutMusic "meta" 3 {
   %% https://lists.nongnu.org/archive/html/lilypond-devel/2022-08/msg00068.html
-  %% \sectionLabel "A"
-  \mark "A"
-  \segnoMark \default
+  \sectionLabel "A"
   \repeat volta 2 {
-    s1*6 |
+    s1*6^\segno |
     s4 \volta 2 \fine \bar "!" s4 s2 |
     s1 |
   }
