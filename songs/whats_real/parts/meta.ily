@@ -18,7 +18,7 @@
   \sectionLabel "A"
   \repeat volta 2 {
     s1*6^\segno |
-    s4 \volta 2 \fine \bar "!" s4 s2 |
+    s1^\coda |
     s1 |
   }
   \break
@@ -48,7 +48,14 @@
       }
     }
   }
-  \jump "D.S. (al Fine)"
+  \jump \markup \tiny "D.S 3 v. e poi la Coda"
   \section
+  \break
+}
+
+\gridPutMusic "meta" 6 {
+  \tweak Y-offset #7.0
+  \sectionLabel \markup \coda
+  s1*3
   \bar "|."
 }

@@ -20,6 +20,12 @@
      (barre 6 1 10))
 
 \storePredefinedDiagram #default-fret-table
+  \chordmode { ees:m7 }
+  #guitar-tuning
+  #'((place-fret 4 13 3)
+     (barre 6 1 11))
+
+\storePredefinedDiagram #default-fret-table
   \chordmode { a:m6+9 }
   #guitar-tuning
   #'((open 1)
@@ -83,4 +89,10 @@
       ees1:5 |
     }
   }
+}
+
+\gridPutMusic "chords" 6 \chordmode {
+  a2:m7 b2:m7 |
+  d2:m7 ees2:m7 |
+  a1:m6+9\fermata |
 }
