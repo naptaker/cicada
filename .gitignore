@@ -3,5 +3,5 @@
 /docs/
 /result*
 /songs/*/*.log
-/songs/*/*.mid
+/songs/*/*.mid*
 /songs/*/*.pdf
