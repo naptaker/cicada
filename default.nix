@@ -4,7 +4,6 @@
 , stdenv
 , symlinkJoin
 , loglevel ? "info"
-  # , CNAME ? "scores.cicada.naptaker.band"
 }:
 let
   version = builtins.readFile ./VERSION;
@@ -65,7 +64,4 @@ symlinkJoin rec {
   paths = with builtins;
     map (songName: mkScore { inherit songName; })
       (attrNames (readDir ./songs));
-  # postBuild = ''
-  #   ln -s ${writeText "CNAME" CNAME} $out/CNAME
-  # '';
 }
