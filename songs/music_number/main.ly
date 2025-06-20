@@ -3,9 +3,9 @@
 \include "oll-core/package.ily"
 \loadPackage naptaker
 
-\setOption naptaker.guitar-tabs ##t
-\setOption naptaker.guitar-tuning \stringTuning <d, aes, d f a d'>
-\setOption naptaker.paper-orientation #'portrait
+\setOption naptaker.guitar-tabs ##f
+\setOption naptaker.guitar-tuning #guitar-tuning
+\setOption naptaker.paper-orientation #'landscape
 #(set! paper-alist (cons '("henle" . (cons (* 23.5 cm ) (* 31 cm))) paper-alist))
 \setOption naptaker.paper-size "henle"
 \setOption naptaker.staff-size #18
@@ -49,6 +49,7 @@
 }
 
 \paper {
+  ragged-last = ##t
   two-sided = ##t
   %% print-first-page-number = ##t
   evenHeaderMarkup = \markup {
@@ -81,10 +82,11 @@ Tempo = { \tempo 4 = 160 }
 global = { \Tempo \defaultTimeSignature \time 4/4 }
 
 \templateInit
-  #'("meta" "guitar")
-  #'(8 4 8)
+  #'("meta" "guitar" "bass" "drums up" "drums down")
+  #'(8 4 12 8 24 11)
+%% A B A′ B C A′ B A′ B C C D E
 
-%% \gridSetRange #'(3 . 3)
+%% \gridSetRange #'(4 . 6)
 
 ope = {
   \temporary \override NoteHead.color = #red
@@ -106,8 +108,13 @@ theScore = <<
   %% \napVox
   %% \napChords
   \napGuitar
-  %% \napDrums
+  \napBass
+  \napDrums
 >>
+
+\layout {
+  \enablePolymeter
+}
 
 \score {
   \theScore

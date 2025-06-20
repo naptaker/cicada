@@ -1,28 +1,61 @@
 \gridPutMusic "meta" 1 {
+  \mark \markup \rounded-box "A"
   \global
-  s1*4 \break
-  s1*4 \break
-  \bar "||"
+  \Key
+  \repeat volta 2 {
+    s1*4 \break
+    s1*4 \break
+  }
   \break
 }
 
 \gridPutMusic "meta" 2 {
-  %% \cadenzaOn
-  \time 6/8
-  s1*3
-  %% \compoundMeter #'(3 3 2 8)
-  \once \numericTimeSignature
-  \time 4/4
-  s1
+  \mark \markup \rounded-box "B"
+  s1*4 \break
   \bar "||"
-  % FIXME: \override Score.KeySignature.break-visibility = ##(#f #f #t)
   \break
-  %% \cadenzaOff
 }
 
 \gridPutMusic "meta" 3 {
-  \key aes \minor
+  \mark \markup \rounded-box "A′"
   s1*4 \break
+  \repeat volta 2 {
+  s1*8 \break
+  }
+  %% \bar "||"
+  \break
+}
+
+\gridPutMusic "meta" 4 {
+  \mark \markup \rounded-box "C"
   s1*4 \break
+  s1*4
+  \bar "||"
+  \break
+}
+
+\gridPutMusic "meta" 5 {
+  \mark \markup \rounded-box "D"
+  s1*8 \break
+  s1*8 \break
+  s1*8
+  \bar "||"
+  \break
+}
+
+\gridPutMusic "meta" 6 {
+  \mark \markup \rounded-box "E"
+  \key e \major
+  s1*2
+  s1*2
+  s1*2
+  s1*2
+  \break
+  s1
+  %% \key fis \major
+  s1
+  %% \key gis \major
+  s1
   \bar "|."
 }
+

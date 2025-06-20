@@ -1,4 +1,17 @@
-\repeat unfold 10 {
-  <aes\5 b'\4 c\3 f>8[ <aes\5 b'\4 c\3 f>8] r8
+#(if #{ \getOption naptaker.guitar-tabs #}
+     #{ \set TabStaff.minimumFret = #9 #})
+\cadenzaOn
+\time 6/8
+\repeat unfold 4 {
+  \repeat unfold 2 {
+    <des aes' ces f ces' des>8[ q8] r8
+  }
+  \bar "|"
 }
-<aes\5 b'\4 c\3 f>8 r8 |
+\cadenzaOff
+\once \numericTimeSignature
+\time 4/4
+\repeat unfold 2 {
+  q8[ q8] r8
+}
+q8 r8 |
