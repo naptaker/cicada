@@ -14,22 +14,22 @@
   title = "Music Number"
   composer = \markup {
     \right-column {
-      "Music by EPBD"
+      "Music by Naptaker"
       "Title by LD"
     }
   }
   copyright = "© 2025 Eric Bailey"
   tagline = \markup {
     \center-column {
-      \with-url #"https://epbd.bandcamp.com"
+      \with-url #"https://naptaker.bandcamp.com"
       \line {
         Recordings available @
-        epbd.bandcamp.com
+        naptaker.bandcamp.com
       }
-      \with-url #"https://github.com/epbdband/"
+      \with-url #"https://github.com/naptaker/cicada"
       \line {
         More scores available @
-        github.com/epbdband
+        github.com/naptaker/cicada
       }
       \null
       \with-url #"https://lilypond.org"
@@ -40,7 +40,7 @@
         lilypond.org
       }
       \null
-      \with-url #"https://github.com/epbdband/singles/commits/main/songs/music-number"
+      \with-url #"https://github.com/naptaker/cicada/commits/main/songs/music_number"
       \line {
         Last updated on $(strftime "%-d %B, %Y" (localtime (current-time)))
       }
