@@ -3,9 +3,8 @@
 , makeFontsConf
 , stdenv
 , symlinkJoin
-, writeText
 , loglevel ? "info"
-, CNAME ? "scores.naptaker.band"
+  # , CNAME ? "scores.cicada.naptaker.band"
 }:
 let
   version = builtins.readFile ./VERSION;
@@ -16,8 +15,6 @@ let
     maintainers = with maintainers; [ yurrriq ];
     license = licenses.cc-by-nc-sa-40;
   };
-
-  Makefile = writeText "Makefile" (builtins.readFile ./Makefile.src);
 
   inherit (lib) optionalString;
 
@@ -38,7 +35,7 @@ let
           enableParallelBuilding = true;
 
           buildPhase = ''
-            install -m644 ${Makefile} ./Makefile
+            install -m644 ${./song.mk} ./Makefile
             install -dm755 $out
           '';
 
@@ -68,7 +65,7 @@ symlinkJoin rec {
   paths = with builtins;
     map (songName: mkScore { inherit songName; })
       (attrNames (readDir ./songs));
-  postBuild = ''
-    ln -s ${writeText "CNAME" CNAME} $out/CNAME
-  '';
+  # postBuild = ''
+  #   ln -s ${writeText "CNAME" CNAME} $out/CNAME
+  # '';
 }

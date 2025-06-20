@@ -4,6 +4,8 @@
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
 
+    git-hooks-nix.url = "github:cachix/git-hooks.nix";
+
     gridly = {
       flake = false;
       url = "github:openlilylib/gridly";
@@ -21,8 +23,6 @@
       url = "github:openlilylib/oll-core";
     };
 
-    git-hooks-nix.url = "github:cachix/git-hooks.nix";
-
     treefmt-nix.url = "github:numtide/treefmt-nix";
   };
 
@@ -30,25 +30,25 @@
     flake-parts.lib.mkFlake { inherit inputs; } {
       flake = {
         overlays.default = _final: prev: rec {
-          myLilypond = prev.stdenv.mkDerivation {
-            pname = "lilypond";
-            inherit (prev.lilypond-with-fonts) version;
-            dontUnpack = true;
-            dontBuild = true;
+          myLilypond = prev.lib.appendToName "with-fonts-and-oll" (prev.symlinkJoin {
+            inherit (prev.lilypond) meta name version;
+
+            paths = [ prev.lilypond ] ++ prev.openlilylib-fonts.all;
+
             nativeBuildInputs = [ prev.makeWrapper ];
-            propagatedBuildInputs = [
-              prev.lilypond-with-fonts
-              oll-lib
-            ];
-            installPhase = ''
-              makeWrapper ${prev.lilypond-with-fonts}/bin/lilypond $out/bin/lilypond \
-                --add-flags "--include=${oll-lib}"
+
+            postBuild = ''
+              for p in $out/bin/*; do
+                  wrapProgram "$p" \
+                      --add-flags "--include=${oll-lib}" \
+                      --set LILYPOND_DATADIR "$out/share/lilypond/${prev.lilypond.version}"
+              done
             '';
-          };
+          });
 
           oll-lib = prev.stdenv.mkDerivation {
             pname = "oll-lib";
-            version = "20250213";
+            version = "2025-06-05";
             dontUnpack = true;
             dontBuild = true;
             installPhase = with inputs; ''
@@ -81,17 +81,18 @@
         };
 
         devShells.default = with pkgs; mkShell {
-          LILYPOND_SHARE_DIR = "${lilypond-with-fonts}/share";
+          LILYPOND_SHARE_DIR = "${myLilypond}/share";
 
           inputsFrom = [
             config.pre-commit.devShell
           ];
 
           nativeBuildInputs = [
-            (frescobaldi.override {
-              lilypond = myLilypond;
-            })
+            # (frescobaldi.override {
+            #   lilypond = myLilypond;
+            # })
             myLilypond
+            nix-output-monitor
             timidity
           ];
         };
@@ -103,9 +104,9 @@
             };
           in
           {
-            inherit (pkgs) myLilypond oll-lib;
             inherit cicada;
             default = cicada;
+            inherit (pkgs) myLilypond oll-lib;
           } // cicada.passthru;
 
         pre-commit.settings.hooks = {
