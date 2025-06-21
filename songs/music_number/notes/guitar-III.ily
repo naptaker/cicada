@@ -21,5 +21,4 @@
 #(if #{ \getOption naptaker.guitar-tabs #}
      #{ \set TabStaff.minimumFret = #0 #})
 <ges des' ges bes>2. q4 |
-\key f \major
 <f c' f a>2. q4 |

@@ -2,11 +2,13 @@
   \mark \markup \rounded-box "A"
   \global
   \Key
-  \repeat volta 2 {
-    s1*4 \break
+  \repeat unfold 2 {
     s1*4 \break
   }
-  \break
+  \bar "||"
+  \repeat unfold 2 {
+    s1*4 \break
+  }
 }
 
 \gridPutMusic "meta" 2 {
@@ -36,7 +38,7 @@
 
 \gridPutMusic "meta" 5 {
   \mark \markup \rounded-box "D"
-  s1*8 \break
+  s1*8 \pageBreak
   s1*8 \break
   s1*8
   \bar "||"
@@ -45,7 +47,6 @@
 
 \gridPutMusic "meta" 6 {
   \mark \markup \rounded-box "E"
-  \key e \major
   s1*2
   s1*2
   s1*2

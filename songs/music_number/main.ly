@@ -5,10 +5,10 @@
 
 \setOption naptaker.guitar-tabs ##f
 \setOption naptaker.guitar-tuning #guitar-tuning
-\setOption naptaker.paper-orientation #'landscape
+\setOption naptaker.paper-orientation #'portrait
 #(set! paper-alist (cons '("henle" . (cons (* 23.5 cm ) (* 31 cm))) paper-alist))
 \setOption naptaker.paper-size "henle"
-\setOption naptaker.staff-size #18
+\setOption naptaker.staff-size #23
 
 \header {
   title = "Music Number"
@@ -82,11 +82,11 @@ Tempo = { \tempo 4 = 160 }
 global = { \Tempo \defaultTimeSignature \time 4/4 }
 
 \templateInit
-  #'("meta" "guitar" "bass" "drums up" "drums down")
-  #'(8 4 12 8 24 11)
+  #'("meta" "guitar" "guitar strum" "bass" "drums up" "drums down")
+  #'(16 4 12 8 24 11)
 %% A B A′ B C A′ B A′ B C C D E
 
-%% \gridSetRange #'(4 . 6)
+%% \gridSetRange #'(4 . 4)
 
 ope = {
   \temporary \override NoteHead.color = #red
@@ -99,6 +99,25 @@ nope = {
   \revert Stem.color
   \revert Beam.color
 }
+
+
+rhythmic =
+#(define-music-function (music) (ly:music?)
+   #{
+      \stopStaff
+      \temporary \override Staff.StaffSymbol.line-count = #1
+      \startStaff
+      \improvisationOn
+      \temporary \override NoteHead.Y-offset = #0
+      \reduceChords {
+        #music
+      }
+      \improvisationOff
+      \revert NoteHead.Y-offset
+      \stopStaff
+      \revert Staff.StaffSymbol.line-count
+      \startStaff
+    #})
 
 %% \Naptaker
 \napPaper
@@ -123,7 +142,8 @@ theScore = <<
     \override Score.BarNumber.padding = #3
     \override Score.BarNumber.stencil =
       #(make-stencil-boxer 0.1 0.25 ly:text-interface::print)
-    \override Score.RehearsalMark.extra-offset = #'(0 . 2)
+    \override Score.RehearsalMark.extra-offset = #'(-10 . 2)
+    \override Score.KeySignature.break-visibility = ##(#f #f #t)
     \override Score.TimeSignature.break-visibility = ##(#f #t #t)
     \override Score.VoltaBracket.thickness = #2
     \override Score.VoltaBracket.extra-offset = #'(0 . 1)

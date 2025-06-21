@@ -1,8 +1,9 @@
 \override Staff.NoteHead.style = #'altdefault
-\compressEmptyMeasures
+\cadenzaOn
 \repeat unfold 4 {
-  <aes ees' aes c>\breve |
+  <aes ees' aes c>\breve \bar "|"
 }
+\cadenzaOff
 \repeat unfold 2 {
   aes'1 ~ |
   aes4 ges4 f2 |
@@ -15,4 +16,6 @@ c1 ~ |
 2 e2 |
 ees1 ~ |
 2 a2 |
-aes\breve |
+\cadenzaOn
+aes\breve \bar "|"
+\cadenzaOff
