@@ -21,19 +21,28 @@
   }
 }
 
-\gridPutMusic "guitar" 4 \relative c {
+\gridPutMusic "guitar" 5 \relative c {
   %% \key aes \minor
   \include "notes/guitar-III.ily"
   \bar "||"
 }
 
-\gridPutMusic "guitar" 5 \relative c {
+\gridPutMusic "guitar" 6 \relative c {
+  \gridGetCellMusic "guitar" 3
+}
+
+\gridPutMusic "guitar" 7 \relative c {
+  \gridGetCellMusic "guitar" 5
+}
+
+\gridPutMusic "guitar" 8 \relative c {
   %% \Key
   \include "notes/guitar-IV.ily"
   \bar "||"
 }
 
-\gridPutMusic "guitar" 6 \relative c, {
+\gridPutMusic "guitar" 9 \relative c, {
   \key e \major
   \include "notes/guitar-V.ily"
+  \bar "|."
 }

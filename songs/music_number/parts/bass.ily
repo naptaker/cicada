@@ -27,16 +27,28 @@
 }
 
 \gridPutMusic "bass" 4 \relative c, {
+  \gridGetCellMusic "bass" 2
+}
+
+\gridPutMusic "bass" 5 \relative c, {
   \include "notes/bass-III.ily"
   \bar "||"
 }
 
-\gridPutMusic "bass" 5 \relative c, {
+\gridPutMusic "bass" 6 \relative c, {
+  \gridGetCellMusic "bass" 3
+}
+
+\gridPutMusic "bass" 7 \relative c, {
+  \gridGetCellMusic "bass" 5
+}
+
+\gridPutMusic "bass" 8 \relative c, {
   \include "notes/bass-IV.ily"
   \bar "||"
 }
 
-\gridPutMusic "bass" 6 \relative c,, {
+\gridPutMusic "bass" 9 \relative c,, {
   \key e \major
   \include "notes/bass-E.ily"
   \bar "|."

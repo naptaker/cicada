@@ -7,7 +7,7 @@
 \setOption naptaker.guitar-tuning #guitar-tuning
 \setOption naptaker.paper-orientation #'portrait
 #(set! paper-alist (cons '("henle" . (cons (* 23.5 cm ) (* 31 cm))) paper-alist))
-\setOption naptaker.paper-size "henle"
+\setOption naptaker.paper-size "letter"
 \setOption naptaker.staff-size #23
 
 \header {
@@ -26,10 +26,10 @@
         Recordings available @
         naptaker.bandcamp.com
       }
-      \with-url #"https://github.com/naptaker/cicada"
+      \with-url #"https://github.com/naptaker"
       \line {
         More scores available @
-        github.com/naptaker/cicada
+        github.com/naptaker
       }
       \null
       \with-url #"https://lilypond.org"
@@ -82,8 +82,8 @@ Tempo = { \tempo 4 = 160 }
 global = { \Tempo \defaultTimeSignature \time 4/4 }
 
 \templateInit
-  #'("meta" "guitar" "guitar strum" "bass" "drums up" "drums down")
-  #'(16 4 12 8 24 11)
+  #'("meta" "guitar" "guitar strum" "bass") %% "drums up" "drums down")
+  #'(16 4 12 4 8 12 8 24 11)
 %% A B A′ B C A′ B A′ B C C D E
 
 %% \gridSetRange #'(4 . 4)
