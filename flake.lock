@@ -233,7 +233,25 @@
         "naptaker": "naptaker",
         "nixpkgs": "nixpkgs_2",
         "oll-core": "oll-core",
+        "snippets": "snippets",
         "treefmt-nix": "treefmt-nix"
+      }
+    },
+    "snippets": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1752123120,
+        "narHash": "sha256-vHp1gPkONNKAmjMODI4LZR0Pe6eW75HpWQlUsgT71hI=",
+        "owner": "yurrriq",
+        "repo": "snippets",
+        "rev": "f0273c2b32a07f89446c14ed475253bdf06967f5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yurrriq",
+        "ref": "lilypond-2.24",
+        "repo": "snippets",
+        "type": "github"
       }
     },
     "treefmt-nix": {

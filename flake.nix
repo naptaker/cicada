@@ -28,6 +28,11 @@
       url = "github:openlilylib/oll-core";
     };
 
+    snippets = {
+      flake = false;
+      url = "github:yurrriq/snippets/lilypond-2.24";
+    };
+
     treefmt-nix.url = "github:numtide/treefmt-nix";
   };
 
@@ -61,6 +66,7 @@
               cp -rv ${oll-core} $out/oll-core
               cp -rv ${gridly} $out/gridly
               cp -rv ${naptaker} $out/naptaker
+              cp -rv ${snippets} $out/snippets
             '';
           };
         };
