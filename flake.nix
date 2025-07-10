@@ -2,6 +2,11 @@
   description = "Scores from Cicada by Naptaker";
 
   inputs = {
+    emacs-overlay = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/emacs-overlay";
+    };
+
     flake-parts.url = "github:hercules-ci/flake-parts";
 
     git-hooks-nix.url = "github:cachix/git-hooks.nix";
@@ -75,12 +80,19 @@
           config.allowUnfreePredicate = pkg:
             nixpkgs.lib.hasPrefix "cicada" (nixpkgs.lib.getName pkg);
           overlays = [
+            inputs.emacs-overlay.overlay
             self.overlays.default
           ];
           inherit system;
         };
 
         devShells.default = with pkgs; mkShell {
+          FONTCONFIG_FILE = makeFontsConf {
+            fontDirectories = [
+              nerd-fonts.iosevka
+            ];
+          };
+
           LILYPOND_SHARE_DIR = "${myLilypond}/share";
 
           inputsFrom = [
@@ -88,10 +100,20 @@
           ];
 
           nativeBuildInputs = [
+            (
+              emacsWithPackagesFromUsePackage {
+                alwaysEnsure = true;
+                config = ./emacs.el;
+                extraEmacsPackages = _epkgs: [
+                  myLilypond
+                ];
+              }
+            )
             # (frescobaldi.override {
             #   lilypond = myLilypond;
             # })
             myLilypond
+            nixd
             nix-output-monitor
             timidity
           ];
