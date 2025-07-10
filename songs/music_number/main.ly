@@ -154,7 +154,12 @@ theScore = <<
 
 \score {
   \unfoldRepeats { \Tempo \articulate \theScore }
-  \midi {}
+  \midi {
+    \context {
+      \Score
+      midiChannelMapping = #'instrument
+    }
+  }
 }
 
 \gridDisplay
