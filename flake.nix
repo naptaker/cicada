@@ -115,7 +115,10 @@
             myLilypond
             nixd
             nix-output-monitor
+            process-compose
+            python3Packages.pywatchman
             timidity
+            watchman
           ];
         };
 
