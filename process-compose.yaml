@@ -14,4 +14,4 @@ processes:
     depends_on:
       watchman:
         condition: process_started
-    working_dir: "songs/music_number"
+    working_dir: "songs/whats_real"

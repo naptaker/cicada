@@ -3,26 +3,26 @@
 \storePredefinedDiagram #default-fret-table
   \chordmode { a:m7 }
   #guitar-tuning
-  #'((place-fret 4 7 3)
+  #'((place-fret 5 7 3)
      (barre 6 1 5))
 
 \storePredefinedDiagram #default-fret-table
-  \chordmode { b:m7 }
+  \chordmode { c:m7 }
   #guitar-tuning
-  #'((place-fret 4 9 3)
-     (barre 6 1 7))
+  #'((place-fret 5 10 3)
+     (barre 6 1 8))
 
 \storePredefinedDiagram #default-fret-table
   \chordmode { d:m7 }
   #guitar-tuning
   #'((place-fret 2 13 4)
-     (place-fret 4 12 3)
+     (place-fret 5 12 3)
      (barre 6 1 10))
 
 \storePredefinedDiagram #default-fret-table
   \chordmode { ees:m7 }
   #guitar-tuning
-  #'((place-fret 4 13 3)
+  #'((place-fret 5 13 3)
      (barre 6 1 11))
 
 \storePredefinedDiagram #default-fret-table
@@ -49,7 +49,7 @@
      )
 
 \storePredefinedDiagram #default-fret-table
-  \chordmode { e:5 }
+  \chordmode { e:5/b }
   #guitar-tuning
   #'(#|
      (mute 1)
@@ -57,11 +57,10 @@
      |#
      (place-fret 3 9 4)
      (place-fret 4 9 3)
-     ;; (barre 5 3 7)
-     (place-fret 5 7 1))
+     (barre 6 3 7))
 
 \storePredefinedDiagram #default-fret-table
-  \chordmode { ees:5 }
+  \chordmode { ees:5/bes }
   #guitar-tuning
   #'(#|
      (mute 1)
@@ -69,13 +68,12 @@
      |#
      (place-fret 3 8 4)
      (place-fret 4 8 3)
-     ;; (barre 5 3 6)
-     (place-fret 5 6 1))
+     (barre 6 3 6))
 
 \gridPutMusic "chords" 3 \chordmode {
   %% \unset TabStaff.minimumFret
   a1:m7 ~ | 1 |
-  b1:m7 ~ | 1 |
+  c1:m7 ~ | 1 |
   d1:m7 ~ | 1 |
   a1:m6+9 ~ | 1 |
 }
@@ -84,15 +82,15 @@
   \repeat volta 2 {
     \repeat unfold 2 {
       a1:5 |
-      e'1:5 |
-      ees1:5 ~ |
-      ees1:5 |
+      e'1:5/b |
+      ees1:5/bes ~ |
+      ees1:5/bes |
     }
   }
 }
 
 \gridPutMusic "chords" 6 \chordmode {
-  a2:m7 b2:m7 |
+  a2:m7 c2:m7 |
   d2:m7 ees2:m7 |
   a1:m6+9\fermata |
 }
