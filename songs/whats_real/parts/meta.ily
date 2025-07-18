@@ -1,6 +1,6 @@
 \gridPutMusic "meta" 1 {
   \global
-  %% \sectionLabel "Intro"
+  %% \sectionLabel \markup \rounded-box "Intro"
   s1*2
 }
 
@@ -15,7 +15,7 @@
 
 \gridPutMusic "meta" 3 {
   %% https://lists.nongnu.org/archive/html/lilypond-devel/2022-08/msg00068.html
-  \sectionLabel "A"
+  \sectionLabel \markup \rounded-box "A"
   \repeat volta 2 {
     s1*6^\segno |
     s1^\coda |
@@ -26,8 +26,7 @@
 }
 
 \gridPutMusic "meta" 4 {
-  \sectionLabel "B"
-  %% \mark B
+  \sectionLabel \markup \rounded-box "B"
   \repeat volta 2 {
     s1*8 |
   }
@@ -36,7 +35,7 @@
 }
 
 \gridPutMusic "meta" 5 {
-  \sectionLabel "C"
+  \sectionLabel \markup \rounded-box "C"
   \repeat volta 4 {
     s1*3 |
     \alternative {
@@ -55,7 +54,7 @@
 
 \gridPutMusic "meta" 6 {
   \tweak Y-offset #7.0
-  \sectionLabel \markup \coda
+  \sectionLabel \markup \rounded-box "Coda"
   s1*3
   \bar "|."
 }
