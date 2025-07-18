@@ -77,7 +77,8 @@ pageNumberColor = #(if (defined? 'pageNumberColor) pageNumberColor black)
 
 %%% =================================================================== [ Grid ]
 
-%% Intro A B C A B C A
+%% Intro A B C A B C 3/4A Coda
+%% New? Intro A B A B C A B A B C A Coda
 \templateInit
 #'("meta" "chords" "guitar" "bass" "drums up" "drums down")
 #'(2 8 8 8 5 3)
