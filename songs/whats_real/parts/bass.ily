@@ -37,6 +37,7 @@
 }
 
 \gridPutMusic "bass" 6 \relative c, {
-  \repeat unfold 4 { a4-> r4 } |
+  a4-> r4 c4-> r4 |
+  d4-> r4 ees4-> r4 |
   a1\fermata |
 }
