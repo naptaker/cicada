@@ -17,7 +17,7 @@
 #(set! paper-alist (cons '("henle" . (cons (* 23.5 cm ) (* 31 cm))) paper-alist))
 \setOption naptaker.paper-size "henle"
 \setOption naptaker.paper-orientation #'portrait
-\setOption naptaker.staff-size #17
+\setOption naptaker.staff-size #15
 
 %%% ================================================================= [ Header ]
 

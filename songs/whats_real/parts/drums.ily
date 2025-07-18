@@ -1,7 +1,8 @@
 \gridPutMusic "drums down" 1 \drummode {
-  \repeat unfold 2 {
-    bd4 sn4 bd4 sn4 |
-  }
+  \override MultiMeasureRest.staff-position = #2
+  \override Rest.staff-position = #0
+  R1 |
+  r4 sn4 bd4 sn4 |
 }
 
 \gridPutMusic "drums down" 2 \drummode {

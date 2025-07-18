@@ -1,6 +1,6 @@
 \gridPutMusic "guitar" 1 \relative c {
-  R1 |
-  r4 a4 f'4\5 e4 |
+  <a e' g c e a>4-> r <c g' bes ees g c>-> r |
+  <d a' c f c' d>4-> r <ees bes' des ges bes ees>-> r |
 }
 
 \gridPutMusic "guitar" 2 \relative c {

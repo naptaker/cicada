@@ -70,6 +70,11 @@
      (place-fret 4 8 3)
      (barre 6 3 6))
 
+%% \gridPutMusic "chords" 1 \chordmode {
+%%   a2:m7 c2:m7 |
+%%   d2:m7 ees2:m7 |
+%% }
+
 \gridPutMusic "chords" 3 \chordmode {
   %% \unset TabStaff.minimumFret
   a1:m7 ~ | 1 |
