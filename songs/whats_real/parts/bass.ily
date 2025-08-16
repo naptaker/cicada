@@ -37,6 +37,15 @@
 }
 
 \gridPutMusic "bass" 6 \relative c, {
+  a4 4 4 4 |
+  a4 a4 f'4\5 e4 |
+  ees4 4 4 4 |
+  ees4 b4 b4 c4\6 |
+  d4 4 4 4 |
+  d4 a4 ees'4 d4 |
+}
+
+\gridPutMusic "bass" 7 \relative c, {
   a4-> r4 c4-> r4 |
   d4-> r4 ees4-> r4 |
   a1\fermata |

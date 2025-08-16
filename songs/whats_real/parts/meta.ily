@@ -16,9 +16,11 @@
 \gridPutMusic "meta" 3 {
   %% https://lists.nongnu.org/archive/html/lilypond-devel/2022-08/msg00068.html
   \sectionLabel \markup \rounded-box "A"
+  \bar ":|.S.|:"
   \repeat volta 2 {
-    s1*6^\segno |
-    s1^\coda |
+    s1*6
+    %% \codaMark \default
+    s1 |
     s1 |
   }
   \break
@@ -47,14 +49,18 @@
       }
     }
   }
-  \jump \markup \tiny "D.S 3 v. e poi la Coda"
+  \jump \markup \huge "D.S." % \tiny "D.S. 3 v. e poi la Coda"
   \section
   \break
 }
 
 \gridPutMusic "meta" 6 {
-  \tweak Y-offset #7.0
-  \sectionLabel \markup \rounded-box "Coda"
+  s1*6 \break
+}
+
+\gridPutMusic "meta" 7 {
+  %% \tweak Y-offset #7.0
+  %% \sectionLabel \markup \rounded-box "Coda"
   s1*3
   \bar "|."
 }

@@ -10,7 +10,8 @@
 }
 
 \gridPutMusic "guitar" 3 \relative c {
-  <>_\markup { \teeny "3 V. col fuzz" }
+  %% <>_\markup { \teeny "3 V. col fuzz" }
+  <>_\markup { \teeny "chords on repeat" }
   \repeat volta 2 {
     \include "notes/guitar-A.ily"
   }
@@ -26,4 +27,8 @@
 
 \gridPutMusic "guitar" 5 \relative c'' {
   \include "notes/guitar-C.ily"
+}
+
+\gridPutMusic "guitar" 6 \relative c {
+  \removeWithTag #'repeat { \include "notes/guitar-A.ily" }
 }
