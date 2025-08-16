@@ -13,6 +13,8 @@ sort:
   depends_on:
     watchman:
       condition: process_started
+  disabled: true
+  namespace: songs
 
 processes:
   watchman:
