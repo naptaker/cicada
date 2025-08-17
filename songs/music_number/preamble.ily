@@ -1,5 +1,98 @@
 \header {
-  title = "Music Number"
+  title = \markup \fontsize #8 "Music Number"
+  subsubtitle  = \markup {
+    \vspace #2
+    \override #'(word-space . 2)
+    \override #'(fret-diagram-details .
+                 ((barre-type . straight)
+                  (finger-code . in-dot)
+                  (number-type . arabic)
+                  (orientation . landscape)))
+    \sans \line {
+      \center-column {
+        \concat { D \flat m \super 7 }
+        \fret-diagram-verbose #'(
+          (place-fret 2 12 4)
+          (place-fret 3 10 2)
+          (place-fret 5 11 3)
+          (barre 6 1 9)
+        )
+      }
+      \center-column {
+        \concat { A \flat }
+        \fret-diagram-verbose #'(
+          (place-fret 3 5 2)
+          (place-fret 4 6 4)
+          (place-fret 5 6 3)
+          (barre 6 1 4)
+        )
+      }
+      \center-column {
+        \concat { G \flat }
+        \fret-diagram-verbose #'(
+          (place-fret 3 3 2)
+          (place-fret 4 4 4)
+          (place-fret 5 4 3)
+          (barre 6 1 2)
+        )
+      }
+      \center-column {
+        \concat { F }
+        \fret-diagram-verbose #'(
+          (place-fret 3 2 2)
+          (place-fret 4 3 4)
+          (place-fret 5 3 3)
+          (barre 6 1 1)
+        )
+      }
+      \center-column {
+        \concat { E }
+        \fret-diagram-verbose #'(
+          (open 1)
+          (open 2)
+          (place-fret 3 1 2)
+          (place-fret 4 2 4)
+          (place-fret 5 2 3)
+          (open 6)
+        )
+      }
+      \center-column {
+        \concat { G \sharp \super { \flat 5 } }
+        \fret-diagram-verbose #'(
+          (place-fret 4 6 4)
+          (place-fret 5 5 3)
+          (place-fret 6 4 2)
+        )
+      }
+      \center-column {
+        \concat { C \sharp }
+        \fret-diagram-verbose #'(
+          (place-fret 3 10 2)
+          (place-fret 4 11 4)
+          (place-fret 5 11 3)
+          (barre 6 1 9)
+        )
+      }
+      \center-column {
+        \concat { F \sharp }
+        \fret-diagram-verbose #'(
+          (place-fret 3 3 2)
+          (place-fret 4 4 4)
+          (place-fret 5 4 3)
+          (barre 6 1 2)
+        )
+      }
+      \center-column {
+        \concat { G \sharp }
+        \fret-diagram-verbose #'(
+          (place-fret 3 5 2)
+          (place-fret 4 6 4)
+          (place-fret 5 6 3)
+          (barre 6 1 4)
+        )
+      }
+    }
+  }
   composer = \markup {
     \right-column {
       "Music by Naptaker"

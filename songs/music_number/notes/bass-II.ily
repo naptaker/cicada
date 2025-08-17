@@ -7,7 +7,8 @@
   \bar "|"
 }
 des'8[ b8] r8 d8[ des8] r8 |
-b8[ des8] r8 ges,8[ g8] r8 |
+b8[ des8] r8 ges,8[ g8] r8
+\bar "|"
 \cadenzaOff
 \once \numericTimeSignature
 \time 4/4

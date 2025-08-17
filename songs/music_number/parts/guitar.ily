@@ -40,9 +40,3 @@
   \include "notes/guitar-IV.ily"
   \bar "||"
 }
-
-\gridPutMusic "guitar" 9 \relative c, {
-  \key e \major
-  \include "notes/guitar-V.ily"
-  \bar "|."
-}

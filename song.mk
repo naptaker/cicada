@@ -21,5 +21,5 @@ all: install
 .PHONY: install
 install: ${prefix}/${pdfName}.pdf
 
-${prefix}/${pdfName}.pdf: main.ly notes/* parts/*
+${prefix}/${pdfName}.pdf: main.ly notes/* parts/* $(wildcard preamble.ily)
 	lilypond ${lilypondFlags} --pdf -o ${prefix}/${pdfName} $< ${output}
