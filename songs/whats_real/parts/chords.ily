@@ -4,7 +4,6 @@
 }
 
 \gridPutMusic "chords" 3 \chordmode {
-  %% \unset TabStaff.minimumFret
   a1:m7 ~ | 1 |
   c1:m7 ~ | 1 |
   d1:m7 ~ | 1 |

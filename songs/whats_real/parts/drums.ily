@@ -40,3 +40,9 @@
     }
   }
 }
+
+\gridPutMusic "drums down" 6 \drummode {
+  \repeat unfold 6 {
+    bd4 sn4 bd4 sn4 |
+  }
+}

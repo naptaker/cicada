@@ -10,7 +10,7 @@
 }
 
 \gridPutMusic "bass" 3 \relative c, {
-  %% \inStaffSegno
+  \bar ":|.S.|:"
   \include "notes/bass-A.ily"
 }
 
@@ -37,12 +37,7 @@
 }
 
 \gridPutMusic "bass" 6 \relative c, {
-  a4 4 4 4 |
-  a4 a4 f'4\5 e4 |
-  ees4 4 4 4 |
-  ees4 b4 b4 c4\6 |
-  d4 4 4 4 |
-  d4 a4 ees'4 d4 |
+  \removeWithTag #'repeat { \include "notes/bass-A.ily" }
 }
 
 \gridPutMusic "bass" 7 \relative c, {

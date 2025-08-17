@@ -2,6 +2,7 @@
   \global
   %% \sectionLabel \markup \rounded-box "Intro"
   s1*2
+  \section
 }
 
 \gridPutMusic "meta" 2 {
@@ -19,7 +20,6 @@
   \bar ":|.S.|:"
   \repeat volta 2 {
     s1*6
-    %% \codaMark \default
     s1 |
     s1 |
   }
@@ -49,18 +49,20 @@
       }
     }
   }
-  \jump \markup \huge "D.S." % \tiny "D.S. 3 v. e poi la Coda"
+  \jump \markup \huge "D.S."
   \section
   \break
 }
 
 \gridPutMusic "meta" 6 {
-  s1*6 \break
+  \sectionLabel \markup \rounded-box "A′"
+  s1*6
+  \section
+  \break
 }
 
 \gridPutMusic "meta" 7 {
-  %% \tweak Y-offset #7.0
-  %% \sectionLabel \markup \rounded-box "Coda"
+  \sectionLabel \markup \rounded-box "D"
   s1*3
   \bar "|."
 }

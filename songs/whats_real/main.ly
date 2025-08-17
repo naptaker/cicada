@@ -35,7 +35,7 @@ chExceptions =
 #(set! paper-alist (cons '("henle" . (cons (* 23.5 cm ) (* 31 cm))) paper-alist))
 \setOption naptaker.paper-size "henle"
 \setOption naptaker.paper-orientation #'portrait
-\setOption naptaker.staff-size #15
+\setOption naptaker.staff-size #14
 
 %%% ================================================================= [ Header ]
 
@@ -55,21 +55,21 @@ global = { \Tempo \defaultTimeSignature \time 4/4 }
                   (number-type . arabic)
                   (orientation . landscape)))
     \sans \line {
-      \column {
+      \center-column {
         \concat { Am \super 7 }
         \fret-diagram-verbose #'(
           (place-fret 5 7 3)
           (barre 6 1 5)
         )
       }
-      \column {
+      \center-column {
         \concat { Cm \super 7 }
         \fret-diagram-verbose #'(
           (place-fret 5 10 3)
           (barre 6 1 8)
         )
       }
-      \column {
+      \center-column {
         \concat { Dm \super 7 }
         \fret-diagram-verbose #'(
           (place-fret 2 13 4)
@@ -77,14 +77,14 @@ global = { \Tempo \defaultTimeSignature \time 4/4 }
           (barre 6 1 10)
         )
       }
-      \column {
+      \center-column {
         \concat { E \flat m \super 7 }
         \fret-diagram-verbose #'(
           (place-fret 5 13 3)
           (barre 6 1 11)
         )
       }
-      \column {
+      \left-column {
         \concat { Am \super 7 \teeny "(alt.)" }
         \fret-diagram-verbose #'(
           (open 1)
@@ -94,7 +94,8 @@ global = { \Tempo \defaultTimeSignature \time 4/4 }
           (open 5)
         )
       }
-      \column {
+      \hspace #-1.75
+      \center-column {
         \concat { A \super 5 }
         \fret-diagram-verbose #'(
           #|
@@ -108,7 +109,7 @@ global = { \Tempo \defaultTimeSignature \time 4/4 }
           (place-fret 6 5 1)
         )
       }
-      \column {
+      \left-column {
         \concat { E \super 5 / B }
         \fret-diagram-verbose #'(
           #|
@@ -120,8 +121,8 @@ global = { \Tempo \defaultTimeSignature \time 4/4 }
           (barre 6 3 7)
         )
       }
-      \column {
-        \concat { E \flat \super 5 B \flat }
+      \left-column {
+        \concat { E \flat \super 5 / B \flat }
         \fret-diagram-verbose #'(
           #|
           (mute 1)
