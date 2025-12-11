@@ -12,7 +12,7 @@
 }
 
 \gridPutMusic "guitar" 3 \relative c {
-  \include "notes/guitar-Ic.ily"
+  \include "notes/guitar-Ia.ily"
   \include "notes/guitar-Ib.ily"
   \repeat volta 2 {
     \palmMuteOn
