@@ -1,12 +1,8 @@
 \gridPutMusic "bass" 1 \relative c, {
   \Key
   \repeat unfold 2 {
-    %% \include "notes/guitar-Ia.ily"
-    R1 |
-    r4 r8 c4 b4 bes8 |
-    %% \include "notes/guitar-Ib.ily"
-    aes4 r4 r2 |
-    r2 r8 f4. |
+    \include "notes/guitar-Ia.ily"
+    \include "notes/guitar-Ib.ily"
     \include "notes/guitar-Ic.ily"
     \include "notes/guitar-Ib.ily"
     \bar "||"
