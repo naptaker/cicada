@@ -8,12 +8,12 @@
 \setOption naptaker.paper-orientation #'portrait
 #(set! paper-alist (cons '("henle" . (cons (* 23.5 cm ) (* 31 cm))) paper-alist))
 \setOption naptaker.paper-size "letter"
-\setOption naptaker.staff-size #13
+\setOption naptaker.staff-size #11
 
 \include "preamble.ily"
 
 \templateInit
-  #'("meta" "chords" "guitar" "guitar strum" "bass") %% "drums up" "drums down")
+  #'("meta" "chords" "guitar" "guitar strum" "bass" "drums up" "drums down")
   #'(16 4 12 4 8 12 8 24 11)
 %% A B A′ B C A′ B A′ B C C D E
 
@@ -40,7 +40,7 @@ theScore = <<
   \napChords
   \napGuitar
   \napBass
-  %% \napDrums
+  \napDrums
 >>
 
 \layout {
