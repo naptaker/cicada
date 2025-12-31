@@ -1,10 +1,10 @@
 \gridPutMusic "bass" 1 \relative c, {
   \Key
   \repeat unfold 2 {
-    \include "notes/guitar-Ia.ily"
-    \include "notes/guitar-Ib.ily"
-    \include "notes/guitar-Ic.ily"
-    \include "notes/guitar-Ib.ily"
+    \include "notes/bass-Ia.ily"
+    \include "notes/bass-Ib.ily"
+    \include "notes/bass-Ic.ily"
+    \include "notes/bass-Ib.ily"
     \bar "||"
   }
 }
@@ -15,15 +15,12 @@
 }
 
 \gridPutMusic "bass" 3 \relative c, {
-  \include "notes/guitar-Ia.ily"
-  \include "notes/guitar-Ib.ily"
-  \repeat volta 2 {
-    \include "notes/guitar-Ia.ily"
-    \include "notes/guitar-Ib.ily"
-    \include "notes/guitar-Ic.ily"
-    \include "notes/guitar-Ib.ily"
-  }
-
+  \include "notes/bass-Ia.ily"
+  \include "notes/bass-Ib.ily"
+  \include "notes/bass-Id.ily"
+  \include "notes/bass-Ib.ily"
+  \include "notes/bass-Ic.ily"
+  \include "notes/bass-Ib.ily"
 }
 
 \gridPutMusic "bass" 4 \relative c, {
@@ -36,7 +33,12 @@
 }
 
 \gridPutMusic "bass" 6 \relative c, {
-  \gridGetCellMusic "bass" 3
+  \include "notes/bass-Ia.ily"
+  \include "notes/bass-Ib.ily"
+  \include "notes/bass-Ia.ily"
+  \include "notes/bass-Ib.ily"
+  \include "notes/bass-Ic.ily"
+  \include "notes/bass-Ib.ily"
 }
 
 \gridPutMusic "bass" 7 \relative c, {
@@ -50,6 +52,6 @@
 
 \gridPutMusic "bass" 9 \relative c,, {
   \key e \major
-  \include "notes/bass-E.ily"
+  \include "notes/bass-V.ily"
   \bar "|."
 }

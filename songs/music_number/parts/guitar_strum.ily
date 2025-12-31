@@ -9,17 +9,21 @@
 }
 
 \gridPutMusic "guitar strum" 8 \relative c {
-  \stopStaff
-  s1*8
-  \repeat unfold 2 {
-    s1*2 |
-    \startStaff
-    \reduceChords {
+  \reduceChords {
+    \cadenzaOn
+    \repeat unfold 4 {
+      <aes, ees' aes c>\breve \bar "|"
+    }
+    \cadenzaOff
+    \repeat unfold 2 {
+      \cadenzaOn
+      <aes, ees' aes c>\breve \bar "||"
+      \cadenzaOff
       <aes, ees' aes c>1 ~ |
       q4 <ges des' ges bes>4 <f c' f a>2 |
     }
-    \stopStaff
   }
+  \stopStaff
   s1*8
   \startStaff
 }

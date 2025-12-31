@@ -12,4 +12,4 @@ b8[ des8] r8 ges,8[ g8] r8
 \cadenzaOff
 \once \numericTimeSignature
 \time 4/4
-b8[ des8] r8 ges,8[ g8] r8 b,4 |
+b8[ des8] r8 ges,8[ g8] r8 des4 |

@@ -6,7 +6,9 @@
   \include "notes/guitar-Ib.ily"
   \bar "||"
   \palmMuteOn
-  \include "notes/guitar-Id.ily"
+  \repeat unfold 2 {
+    \include "notes/guitar-Id.ily"
+  }
   \palmMuteOff
   \bar "||"
 }
@@ -14,11 +16,11 @@
 \gridPutMusic "guitar" 3 \relative c {
   \include "notes/guitar-Ia.ily"
   \include "notes/guitar-Ib.ily"
-  \repeat volta 2 {
-    \palmMuteOn
+  \palmMuteOn
+  \repeat unfold 2 {
     \include "notes/guitar-Id.ily"
-    \palmMuteOff
   }
+  \palmMuteOff
 }
 
 \gridPutMusic "guitar" 5 \relative c {

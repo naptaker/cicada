@@ -24,10 +24,7 @@
 \gridPutMusic "meta" 3 {
   %% \sectionLabel \markup \rounded-box "A′"
   s1*4 \break
-  \repeat volta 2 {
-    s1*8 \break
-  }
-  \break
+  s1*8 \break
   \section
 }
 
