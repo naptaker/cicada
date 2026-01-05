@@ -6,23 +6,16 @@
 }
 \cadenzaOff
 %}
-s1*8
+s1*4
 \repeat unfold 2 {
-  aes'1 ~ |
-  aes4 ges4 f2 |
+  aes'2 ~ aes8 ges8 f4 |
   \stopStaff
-  s1*2 |
+  s1 |
   \startStaff
 }
 \ottava #1
-aes'1 ~ |
-2 des2 |
-c1 ~ |
-2 f2 |
-ees1 ~ |
+aes'2. des4 |
+c2. f4 |
 ees1 |
-\cadenzaOn
-\appoggiatura ges8
-aes\breve
-\cadenzaOff
+\acciaccatura ges8 aes1 |
 \ottava #0

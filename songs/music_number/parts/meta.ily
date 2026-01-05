@@ -10,6 +10,7 @@
     s1*4 \break
   }
   \section
+  \pageBreak
 }
 
 \gridPutMusic "meta" 2 {
@@ -24,7 +25,8 @@
 \gridPutMusic "meta" 3 {
   %% \sectionLabel \markup \rounded-box "A′"
   s1*4 \break
-  s1*8 \break
+  s1*4 \break
+  s1*4 \break
   \section
 }
 
@@ -40,13 +42,14 @@
   s1*4
   \codaMark \default
   \bar "||"
-  \break
+  \pageBreak
   \section
 }
 
 \gridPutMusic "meta" 6 {
   \gridGetCellMusic "meta" 3
   \jump "D.S. al Coda"
+  \pageBreak
 }
 
 \gridPutMusic "meta" 7 {
@@ -62,24 +65,22 @@
 
 \gridPutMusic "meta" 8 {
   \sectionLabel \markup \rounded-box "D"
-  s1*8 \pageBreak
-  s1*8 \break
-  s1*8
-  \bar "||"
+  \once \override Score.MetronomeMark.extra-offset = #'(0 . -3)
+  \tempo "Andante" 4 = 80
+  s1*4 \break
+  s1*4 \pageBreak
+  s1*4 \bar "||"
   \break
   \section
 }
 
 \gridPutMusic "meta" 9 {
   \sectionLabel \markup \rounded-box "E"
-  s1*2
-  s1*2
-  s1*2
-  s1*2
+  s1*4
   \break
-  s1
+  s2
   %% \key fis \major
-  s1
+  s2
   %% \key gis \major
   s1
   \fine

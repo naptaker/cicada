@@ -132,32 +132,44 @@
 \paper {
   ragged-last = ##t
   two-sided = ##t
+  %% first-page-number = #1
   %% print-first-page-number = ##t
-  evenHeaderMarkup = \markup {
-    \column {
-      \fill-line {
-        \null
-        \line {
-          \if \should-print-page-number
-          \fromproperty #'page:page-number-string
-        }
-      }
-    }
-  }
-
-  oddHeaderMarkup = \markup {
-    \column {
-      \fill-line {
-        \line {
-          \if \should-print-page-number
-          \fromproperty #'page:page-number-string
-        }
-        \null
-      }
-    }
-  }
+  inner-margin = 25\mm
+  outer-margin = 15\mm
+  % evenHeaderMarkup = \markup {
+  %   \column {
+  %     \fill-line {
+  %       \null
+  %       \line {
+  %         \if \should-print-page-number
+  %         \fromproperty #'page:page-number-string
+  %       }
+  %     }
+  %   }
+  % }
+  % oddHeaderMarkup = \markup {
+  %   \column {
+  %     \fill-line {
+  %       \line {
+  %         \if \should-print-page-number
+  %         \fromproperty #'page:page-number-string
+  %       }
+  %       \null
+  %     }
+  %   }
+  % }
 }
 
 Key = { \key aes \major }
-Tempo = { \tempo 4 = 160 }
+Tempo = { \tempo "Vivace" 4 = 160 }
 global = { \Tempo \defaultTimeSignature \time 4/4 }
+
+startOops = {
+  \temporary \override NoteHead.color = #red
+  \temporary \override Stem.color = #red
+}
+
+endOops = {
+  \revert NoteHead.color
+  \revert Stem.color
+}
