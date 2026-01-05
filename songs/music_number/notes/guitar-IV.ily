@@ -13,6 +13,7 @@ s1*4
   s1 |
   \startStaff
 }
+\bar ""
 \ottava #1
 aes'2. des4 |
 c2. f4 |

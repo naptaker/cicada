@@ -13,14 +13,22 @@
     \repeat unfold 4 {
       <aes, ees' aes c>1 |
     }
-    \bar "||"
+    %% \bar "||"
+    \stemDown
     \repeat unfold 2 {
       \stopStaff
       s1 |
       \startStaff
-      <aes, ees' aes c>2 ~ q8 <ges des' ges bes>8 <f c' f a>4 |
+      <aes, ees' aes c>2 ~ q8
+      \noBeam
+      \once \override Stem.length = #11
+      <ges des' ges bes>8
+      \once \override Stem.length = #14
+      <f c' f a>4 |
     }
+    \stemNeutral
   }
+  %% \bar "||"
   \stopStaff
   s1*4
   \startStaff
