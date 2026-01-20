@@ -15,10 +15,10 @@
 }
 
 \gridPutMusic "bass" 3 \relative c, {
-  \include "notes/bass-Ia.ily"
-  \include "notes/bass-Ib.ily"
-  \include "notes/bass-Id.ily"
-  \include "notes/bass-Ib.ily"
+  \repeat unfold 2 {
+    \include "notes/bass-Ia.ily"
+    \include "notes/bass-Ib.ily"
+  }
   \include "notes/bass-Ic.ily"
   \include "notes/bass-Ib.ily"
 }
@@ -33,12 +33,7 @@
 }
 
 \gridPutMusic "bass" 6 \relative c, {
-  \include "notes/bass-Ia.ily"
-  \include "notes/bass-Ib.ily"
-  \include "notes/bass-Ia.ily"
-  \include "notes/bass-Ib.ily"
-  \include "notes/bass-Ic.ily"
-  \include "notes/bass-Ib.ily"
+  \gridGetCellMusic "bass" 3
 }
 
 \gridPutMusic "bass" 7 \relative c, {
