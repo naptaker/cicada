@@ -37,7 +37,7 @@ jobs:
           echo '{ allowUnfree = true; }' >~/.config/nixpkgs/config.nix
       - id: pages
         name: Configure Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       - name: Build with Nix
         run: |
           nix build --out-link ./_site
