@@ -34,6 +34,7 @@
   \startStaff
 }
 
+%{
 \gridPutMusic "guitar strum" 9 \relative c {
   \key e \major
   \reduceChords {
@@ -41,3 +42,4 @@
   }
   \bar "|."
 }
+%}
