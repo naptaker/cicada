@@ -1,5 +1,6 @@
 \header {
   title = \markup \fontsize #8 "Music Number"
+  %% subtitle = \markup "Title by LD"
   subsubtitle  = \markup {
     \vspace #2
     \override #'(word-space . 2)
@@ -96,10 +97,10 @@
   composer = \markup {
     \right-column {
       "Music by Naptaker"
-      "Title by LD"
+      "Lyrics by Andrew Smith"
     }
   }
-  copyright = "© 2025 Eric Bailey"
+  copyright = "© 2025-2026 Eric Bailey"
   tagline = \markup {
     \center-column {
       \with-url #"https://naptaker.bandcamp.com"

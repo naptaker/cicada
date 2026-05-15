@@ -13,7 +13,7 @@
 \include "preamble.ily"
 
 \templateInit
-  #'("meta" "chords" "guitar" "guitar strum" "bass" "drums up" "drums down")
+  #'("meta" "chords" "vox" "guitar" "guitar strum" "bass" "drums up" "drums down")
   #'(16 4 12 4 8 12 8 12 6)
 %% A B A′ B C A′ B A′ B C C D E
 
@@ -36,7 +36,7 @@ nope = {
 \napIncludes
 
 theScore = <<
-  %% \napVox
+  \napVox
   \napChords
   \napGuitar
   \napBass
