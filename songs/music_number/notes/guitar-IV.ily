@@ -1,11 +1,3 @@
-%{
-\override Staff.NoteHead.style = #'altdefault
-\cadenzaOn
-\repeat unfold 4 {
-  <aes ees' aes c>\breve \bar "|"
-}
-\cadenzaOff
-%}
 s1*4
 \repeat unfold 2 {
   aes'2 ~ aes8 ges8 f4 |

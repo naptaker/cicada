@@ -34,12 +34,10 @@
   \startStaff
 }
 
-%{
-\gridPutMusic "guitar strum" 9 \relative c, {
+\gridPutMusic "guitar strum" 9 \relative c {
   \key e \major
   \reduceChords {
     \include "notes/guitar-V.ily"
-    \bar "|."
   }
+  \bar "|."
 }
-%}
