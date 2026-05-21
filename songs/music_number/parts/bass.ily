@@ -18,9 +18,11 @@
   \include "notes/bass-Ia.ily"
   \include "notes/bass-Ib.ily"
   \include "notes/bass-Id.ily"
-  \include "notes/bass-Ib.ily"
-  \include "notes/bass-Ic.ily"
-  \include "notes/bass-Ib.ily"
+  \relative c, {
+    \include "notes/bass-Ib.ily"
+    \include "notes/bass-Ic.ily"
+    \include "notes/bass-Ib.ily"
+  }
 }
 
 \gridPutMusic "bass" 4 \relative c, {

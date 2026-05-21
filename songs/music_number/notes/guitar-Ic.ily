@@ -1,6 +1,6 @@
 #(if #{ \getOption naptaker.guitar-tabs #}
      #{ \set TabStaff.minimumFret = #3 #})
-aes8 aes aes' aes ges ges c, des ~ |
+gis8 gis gis' gis fis fis c cis ~ |
 #(if #{ \getOption naptaker.guitar-tabs #}
      #{ \set TabStaff.minimumFret = #1 #})
-des8 des f,4 c'8 c b bes |
+cis8 cis f,4 c'8 c b ais |

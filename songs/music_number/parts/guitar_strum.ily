@@ -11,7 +11,7 @@
 \gridPutMusic "guitar strum" 8 \relative c {
   \reduceChords {
     \repeat unfold 4 {
-      <aes, ees' aes c>1 |
+      <gis, dis' gis c>1 |
     }
     %% \bar "||"
     \stemDown
@@ -19,10 +19,10 @@
       \stopStaff
       s1 |
       \startStaff
-      <aes, ees' aes c>2 ~ q8
+      <gis, dis' gis c>2 ~ q8
       \noBeam
       \once \override Stem.length = #11
-      <ges des' ges bes>8
+      <fis cis' fis ais>8
       \once \override Stem.length = #14
       <f c' f a>4 |
     }

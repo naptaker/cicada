@@ -1,2 +1,2 @@
-aes4 aes' ges c,8 des ~ |
-des8 b f c'4 b4 bes8 |
+gis4 gis' fis c8 cis ~ |
+cis8 b f c'4 b4 ais8 |

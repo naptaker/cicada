@@ -1,4 +1,4 @@
-\override Staff.NoteHead.style = #'altdefault
+%% \override Staff.NoteHead.style = #'altdefault
 \compressEmptyMeasures
 <e b' e gis>1 |
 #(if #{ \getOption naptaker.guitar-tabs #}
@@ -6,7 +6,7 @@
 <gis d' gis>1 |
 #(if #{ \getOption naptaker.guitar-tabs #}
      #{ \set TabStaff.minimumFret = #9 #})
-<cis gis' cis eis>1 |
+<cis gis' cis f>1 |
 #(if #{ \getOption naptaker.guitar-tabs #}
      #{ \set TabStaff.minimumFret = #4 #})
 <gis d' gis>1 |

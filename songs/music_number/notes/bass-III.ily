@@ -1,6 +1,6 @@
 \repeat unfold 3 {
-  ces4 8 8 8( c8 des8) d'8 ~ |
-  8 aes,8 ges8 aes4 aes8 8 ges8 |
+  b4 8 8 8( c8 cis8) d'8 ~ |
+  8 gis,,8 fis8 gis4 gis8 8 fis8 |
 }
-<ges des' ges>1 |
+<fis cis' fis>1 |
 <f c' f>1 |

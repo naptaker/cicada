@@ -1,5 +1,5 @@
 \gridPutMusic "chords" 2 \chordmode {
-  des1:m7 |
+  cis1:7 |
   s1*3 |
 }
 
@@ -11,13 +11,13 @@
 \gridPutMusic "chords" 8 \chordmode {
   \override Score.ChordName.extra-offset = #'(0 . -6)
   \repeat unfold 4 {
-    \once \set chordChanges = ##f
-    aes1
+    %% \once \set chordChanges = ##f
+    gis1
   }
   \repeat unfold 2 {
     s1 |
     \once \set chordChanges = ##f
-    aes2 ~ aes8 ges8 f4 |
+    gis2 ~ gis8 fis8 f4 |
   }
   s1*4
 }

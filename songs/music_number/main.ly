@@ -17,18 +17,24 @@
   #'(16 4 12 4 8 12 8 12 6)
 %% A B A′ B C A′ B A′ B C C D E
 
-%% \gridSetRange #'(8 . 9)
+\include "parts/lyrics.ily"
+
+% \gridSetRange #'(8 . 9)
 
 ope = {
-  \temporary \override NoteHead.color = #red
-  \temporary \override Stem.color = #red
   \temporary \override Beam.color = #red
+  \temporary \override MultiMeasureRest.color = #red
+  \temporary \override NoteHead.color = #red
+  \temporary \override Rest.color = #red
+  \temporary \override Stem.color = #red
 }
 
 nope = {
-  \revert NoteHead.color
-  \revert Stem.color
   \revert Beam.color
+  \revert MultiMeasureRest.color
+  \revert NoteHead.color
+  \revert Rest.color
+  \revert Stem.color
 }
 
 %% \Naptaker

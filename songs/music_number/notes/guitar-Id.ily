@@ -1,4 +1,4 @@
-aes8 8 r8 aes8 8 8 r aes8 ~ |
-aes8 8 r8 aes8 8 ces8 des8 ces8 |
-aes8 8 r8 aes8 8 8 r aes8 ~ |
-aes8 8 f8 c'4 e,4. |
+gis8 8 r8 gis8 8 8 r gis8 ~ |
+gis8 8 r8 gis8 8 b8 cis8 b8 |
+gis8 8 r8 gis8 8 8 r gis8 ~ |
+gis8 8 f8 c'4 e,4. |

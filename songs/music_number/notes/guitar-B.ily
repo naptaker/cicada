@@ -4,7 +4,7 @@
 \time 6/8
 \repeat unfold 4 {
   \repeat unfold 2 {
-    <des aes' ces f ces' des>8[ q8] r8
+    <cis gis' b f b' cis>8[ q8] r8
   }
   \bar "|"
 }

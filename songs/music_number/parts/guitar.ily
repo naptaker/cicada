@@ -5,11 +5,13 @@
   \include "notes/guitar-Ic.ily"
   \include "notes/guitar-Ib.ily"
   \bar "||"
+  %% \ottava #-1
   \palmMuteOn
   \repeat unfold 2 {
     \include "notes/guitar-Id.ily"
   }
   \palmMuteOff
+  %% \ottava #0
   \bar "||"
 }
 
@@ -24,7 +26,6 @@
 }
 
 \gridPutMusic "guitar" 5 \relative c {
-  %% \key aes \minor
   \include "notes/guitar-III.ily"
   \bar "||"
 }

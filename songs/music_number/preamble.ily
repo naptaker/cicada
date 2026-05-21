@@ -11,7 +11,7 @@
                   (orientation . landscape)))
     \sans \line {
       \center-column {
-        \concat { D \flat m \super 7 }
+        \concat { C \sharp \super 7 }
         \fret-diagram-verbose #'(
           (place-fret 2 12 4)
           (place-fret 3 10 2)
@@ -20,7 +20,7 @@
         )
       }
       \center-column {
-        \concat { A \flat }
+        \concat { G \sharp }
         \fret-diagram-verbose #'(
           (place-fret 3 5 2)
           (place-fret 4 6 4)
@@ -29,7 +29,7 @@
         )
       }
       \center-column {
-        \concat { G \flat }
+        \concat { F \sharp }
         \fret-diagram-verbose #'(
           (place-fret 3 3 2)
           (place-fret 4 4 4)
@@ -74,24 +74,6 @@
           (barre 6 1 9)
         )
       }
-      \center-column {
-        \concat { F \sharp }
-        \fret-diagram-verbose #'(
-          (place-fret 3 3 2)
-          (place-fret 4 4 4)
-          (place-fret 5 4 3)
-          (barre 6 1 2)
-        )
-      }
-      \center-column {
-        \concat { G \sharp }
-        \fret-diagram-verbose #'(
-          (place-fret 3 5 2)
-          (place-fret 4 6 4)
-          (place-fret 5 6 3)
-          (barre 6 1 4)
-        )
-      }
     }
   }
   composer = \markup {
@@ -103,6 +85,26 @@
   copyright = "© 2025-2026 Eric Bailey"
   tagline = \markup {
     \center-column {
+      \line {
+        Naptaker is...
+      }
+      \line {
+        Andrew Smith
+        on Vocals
+      }
+      \line {
+        Eric Bailey
+        on Guitar
+      }
+      \line {
+        Sam Albers
+        on Bass
+      }
+      \line {
+        Preston Drum
+        on Drums
+      }
+      \null
       \with-url #"https://naptaker.bandcamp.com"
       \line {
         Recordings available @
@@ -161,7 +163,7 @@
   % }
 }
 
-Key = { \key aes \major }
+Key = { \key gis \minor }
 Tempo = { \tempo "Vivace" 4 = 160 }
 global = { \Tempo \defaultTimeSignature \time 4/4 }
 
