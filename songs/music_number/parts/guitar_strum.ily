@@ -1,7 +1,8 @@
 \gridPutMusic "guitar strum" 2 \relative c {
   \reduceChords {
-    \include "notes/guitar-B.ily"
+    \include "notes/guitar-II.ily"
   }
+  \section
 }
 
 \gridPutMusic "guitar strum" 4 \relative c {
