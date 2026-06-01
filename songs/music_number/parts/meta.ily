@@ -1,11 +1,10 @@
 \gridPutMusic "meta" 1 {
-  %% \sectionLabel \markup \rounded-box "A"
+  \sectionLabel \markup \rounded-box "A"
   \global
   \Key
   \repeat unfold 2 {
     s1*4 \break
   }
-  \bar "||"
   \repeat unfold 2 {
     s1*4 \break
   }
@@ -14,74 +13,76 @@
 }
 
 \gridPutMusic "meta" 2 {
-  %% \sectionLabel \markup \rounded-box "B"
-  \segnoMark \default
+  \sectionLabel \markup \rounded-box "B"
   s1*4 \break
-  \bar "||"
-  \break
   \section
 }
 
 \gridPutMusic "meta" 3 {
-  %% \sectionLabel \markup \rounded-box "A′"
+  \sectionLabel \markup \rounded-box "A′"
   s1*4 \break
   s1*4 \break
   s1*4 \break
   \section
+  \pageBreak
 }
 
 \gridPutMusic "meta" 4 {
-  \pageBreak
-  \omit \segnoMark \default
+  %% \omit \sectionLabel
   \gridGetCellMusic "meta" 2
 }
 
 \gridPutMusic "meta" 5 {
-  %% \sectionLabel \markup \rounded-box "C"
+  \sectionLabel \markup \rounded-box "C"
   s1*4 \break
   s1*4
-  \codaMark \default
-  \bar "||"
-  \pageBreak
   \section
 }
 
 \gridPutMusic "meta" 6 {
+  \noPageBreak
   \gridGetCellMusic "meta" 3
-  \jump "D.S. al Coda"
-  \pageBreak
+  \noPageBreak
 }
 
 \gridPutMusic "meta" 7 {
-  %% \sectionLabel \markup \rounded-box "C"
-  \sectionLabel "Coda"
-  s1
-  s1*3 \break
-  s1*4
-  \bar "||"
-  \break
-  \section
+  \gridGetCellMusic "meta" 2
 }
 
 \gridPutMusic "meta" 8 {
+  \gridGetCellMusic "meta" 3
+}
+
+\gridPutMusic "meta" 9 {
+  \gridGetCellMusic "meta" 2
+}
+
+\gridPutMusic "meta" 10 {
+  \gridGetCellMusic "meta" 5
+  \noPageBreak
+}
+
+\gridPutMusic "meta" 11 {
+  \gridGetCellMusic "meta" 5
+}
+
+\gridPutMusic "meta" 12 {
+  \pageBreak
   \sectionLabel \markup \rounded-box "D"
   \once \override Score.MetronomeMark.extra-offset = #'(0 . -3)
   \tempo "Andante" 4 = 80
   s1*4 \break
-  s1*4 \pageBreak
-  s1*4 \bar "||"
-  \break
+  s1*4 \break
+  s1*4 \break
   \section
 }
 
-\gridPutMusic "meta" 9 {
+\gridPutMusic "meta" 13 {
   \sectionLabel \markup \rounded-box "E"
   s1*4
   \break
   s2
-  %% \key fis \major
   s2
-  %% \key gis \major
   s1
   \fine
 }

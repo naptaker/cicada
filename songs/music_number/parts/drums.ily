@@ -10,7 +10,6 @@
       }
      }
   }
-  \bar "||"
   << { s8 tomfl8 tomfl8 tomfl8 tomfl8 tomfl8 tomfl8 tomfl8 } \\ { cymc1 } >> |
   tomfl8 tomfl8 tomfl8 tomfl8 tomfl8 tomfl8 tomfl8 tomfl16 tomfl16 |
   \repeat unfold 2 {
@@ -21,7 +20,7 @@
   \repeat unfold 2 {
     tomfl8 tomfl8 tomfl8 tomfl8 tomfl8 tomfl8 tomfl8 tomfl8 |
   }
-  \bar "||"
+  \section
 }
 
 \gridPutMusic "drums down" 1 \drummode {
@@ -39,22 +38,22 @@
       }
     }
   }
-  \bar "||"
   \repeat unfold 2 {
     \repeat unfold 3 {
       bd4 sn4 bd4 sn4 |
     }
     bd4 sn4 bd4 sn8 \once \slurUp \flam sn8 |
   }
-  \bar "||"
+  \section
 }
 
 \gridPutMusic "drums up" 2 \drummode {
+  \once \numericTimeSignature
+  \time 4/4
   cymc1 |
   s1*3
+  \section
 }
-
-%% FIXME: differs on the segno repeat
 
 \gridPutMusic "drums down" 2 \drummode {
   bd4 <sn ss>8 ss8 <bd ss>8 ss8 <sn ss>8 ss8 |
@@ -62,7 +61,7 @@
       \repeat unfold 2 { <bd ss>8 ss8 <sn ss>8 ss8 } |
   }
   <bd ss>8 ss8 <sn ss>8 <bd ss>8 <bd sn>8 q q q |
-  \bar "||"
+  \section
 }
 
 \gridPutMusic "drums up" 3 \drummode {
@@ -80,6 +79,7 @@
   \repeat unfold 2 {
     \repeat unfold 8 {tomfl8 } |
   }
+  \section
 }
 
 \gridPutMusic "drums down" 3 \drummode {
@@ -93,6 +93,7 @@
     }
     bd4 sn4 bd4 sn8 \once \slurUp \flam sn8 |
   }
+  \section
 }
 
 \gridPutMusic "drums up" 4 \drummode {
@@ -104,7 +105,7 @@
   <bd ss>8 ss8 <sn ss>8 ss8 <bd ss>8 ss8 <sn ss>8 ss8 |
   <bd ss>8 ss8 <sn ss>8 ss8 <bd ss>8 ss8 <sn ss>8 <bd ss>8 |
   <bd sn>8 <bd sn>8 <bd sn>8 <bd sn>8 <bd sn>8 <bd sn>8 <bd sn>8 sn8 |
-  \bar "||"
+  \section
 }
 
 \gridPutMusic "drums up" 5 \drummode {
@@ -116,6 +117,7 @@
   \repeat unfold 8 { hhho8 } |
   << { s8 \repeat unfold 7 { tomfl8 } } \\ { cymc1 } >> |
   \repeat unfold 8 { tomfl8 } |
+  \section
 }
 
 \gridPutMusic "drums down" 5 \drummode {
@@ -127,7 +129,7 @@
   bd8 bd8 sn8 bd8 bd8 bd8 <bd sn>8 bd8 |
   <bd sn>8-> bd8 bd8 <bd sn>8-> bd8 bd8 <bd sn>8-> bd8 |
   <bd sn>8-> bd8 bd8 <bd sn>8-> bd8 bd8 <bd sn>8-> \once \slurUp \flam <bd sn>8 |
-  \bar "||"
+  \section
 }
 
 \gridPutMusic "drums up" 6 \drummode {
@@ -144,6 +146,7 @@
   \repeat unfold 2 {
     \repeat unfold 8 { tomfl8 } |
   }
+  \section
 }
 
 \gridPutMusic "drums down" 6 \drummode {
@@ -169,9 +172,44 @@
       }
     }
   }
+  \section
 }
 
 \gridPutMusic "drums up" 7 \drummode {
+  \gridGetCellMusic "drums up" 2
+}
+
+%% FIXME: differs on the segno repeat?
+\gridPutMusic "drums down" 7 \drummode {
+  \gridGetCellMusic "drums down" 2
+}
+
+\gridPutMusic "drums up" 8 \drummode {
+  \gridGetCellMusic "drums up" 3
+}
+
+\gridPutMusic "drums down" 8 \drummode {
+  \gridGetCellMusic "drums down" 3
+}
+
+\gridPutMusic "drums up" 9 \drummode {
+  \gridGetCellMusic "drums up" 2
+}
+
+%% FIXME: differs on the segno repeat?
+\gridPutMusic "drums down" 9 \drummode {
+  \gridGetCellMusic "drums down" 2
+}
+
+\gridPutMusic "drums up" 10 \drummode {
+  \gridGetCellMusic "drums up" 5
+}
+
+\gridPutMusic "drums down" 10 \drummode {
+  \gridGetCellMusic "drums down" 5
+}
+
+\gridPutMusic "drums up" 11 \drummode {
   << { s4 \repeat unfold 6 { hh8 } } \\ { cymc1 } >> |
   hh8 hh8 hhho8 hhho8 hhc16 s16 s8 s4 |
   << { s4 hhho8 hhho8 hhho8 hhho8 hhho8 hhho8 } \\ { cymc1 } >> |
@@ -180,9 +218,10 @@
   \repeat unfold 8 { hhho8 } |
   << { s8 \repeat unfold 7 { tomfl8 } } \\ { cymc1 } >> |
   \repeat unfold 8 { tomfl8 } |
+  \section
 }
 
-\gridPutMusic "drums down" 7 \drummode {
+\gridPutMusic "drums down" 11 \drummode {
   bd4 sn4 s8 bd8 sn8 bd8 ~ |
   bd8 bd8 sn8 bd8 bd16 sn16 sn16 sn16 <bd sn>16 sn16 sn16 sn16 |
   bd4 sn4 s8 bd8 sn8 bd8 ~ |
@@ -191,10 +230,10 @@
   bd8 bd8 sn8 bd8 bd8 bd8 <bd sn>8 bd8 |
   <bd sn>8-> bd8 bd8 <bd sn>8-> bd8 bd8 <bd sn>8-> bd8 |
   <bd sn>8-> bd8 bd8 <bd sn>8-> bd8 bd8 <bd sn>8-> \once \slurUp \flam <bd sn>8 |
-  \bar "||"
+  \section
 }
 
-\gridPutMusic "drums up" 8 \drummode {
+\gridPutMusic "drums up" 12 \drummode {
   \repeat unfold 2 {
     << { s8 \repeat unfold 7 { cymr8 } } \\ { cymc1 } >> |
   }
@@ -239,9 +278,10 @@
       cymc1
     }
   >> |
+  \section
 }
 
-\gridPutMusic "drums down" 8 \drummode {
+\gridPutMusic "drums down" 12 \drummode {
   \repeat unfold 3 {
     bd4 sn8. \flam sn16 bd8 bd8 sn8. \flam sn16 |
   }
@@ -255,9 +295,10 @@
     bd4 sn8. \flam sn16 bd8 bd8 <bd sn>8 bd8 |
   }
   bd4 sn8. \flam sn16 <bd sn>8 bd8 s4 |
+  \section
 }
 
-\gridPutMusic "drums up" 9 \drummode {
+\gridPutMusic "drums up" 13 \drummode {
   << { s8 \repeat unfold 6 { hh8 } hhho8 } \\ { cyms1 } >> |
   << { s8 \repeat unfold 6 { hh8 } hhho8 } \\ { cymr1 } >> |
   << { s8 \repeat unfold 6 { hh8 } hhho8 } \\ { cymc1 } >> |
@@ -266,7 +307,7 @@
   <cymc cyms> 1
 }
 
-\gridPutMusic "drums down" 9 \drummode {
+\gridPutMusic "drums down" 13 \drummode {
   bd4 sn4 s16 \once \slurUp \flam sn16 bd8 sn8. \once \slurUp \flam sn16 |
   bd4 sn8. bd16 ~ bd16 sn16 bd16 bd16 sn8. \once \slurUp \flam sn16 |
   bd4 sn4 s16 \once \slurUp \flam sn16 bd8 sn8. \once \slurUp \flam sn16 |

@@ -25,18 +25,16 @@ verseThree = \lyricmode {
   was -- n't plucked too soon
   Mag -- net -- ized in light,
   she's all a -- lone in bloom
-  And where are you, you, you?
-  %% TODO: ch-ch-ch-ch-ch yeah ooh
+  And where are __ you, __
 }
 
 verseFour = \lyricmode {
   So, when you bring one home,
   make sure to stay put
-  And if it breaks you down,
+  And if it breaks you down, __
   you're gon -- na fade a -- way,
   %% you could, you would, you would, you would__
-  you would, you would, you would, you would__
-  %% TODO: ch-ch-ch-choo __ you ooh
+  you would, you would, you would, you would __
 }
 
 chant = \lyricmode {

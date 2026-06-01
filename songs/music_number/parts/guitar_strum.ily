@@ -9,12 +9,22 @@
   \gridGetCellMusic "guitar strum" 2
 }
 
-\gridPutMusic "guitar strum" 8 \relative c {
+\gridPutMusic "guitar strum" 7 \relative c {
+  \gridGetCellMusic "guitar strum" 2
+}
+
+\gridPutMusic "guitar strum" 9 \relative c {
+  \gridGetCellMusic "guitar strum" 2
+}
+
+\gridPutMusic "guitar strum" 12 \relative c {
   \reduceChords {
+%{
     \repeat unfold 4 {
       <gis, dis' gis c>1 |
     }
-    %% \bar "||"
+%}
+    s1*4
     \stemDown
     \repeat unfold 2 {
       \stopStaff
@@ -29,14 +39,13 @@
     }
     \stemNeutral
   }
-  %% \bar "||"
   \stopStaff
   s1*4
   \startStaff
 }
 
 %{
-\gridPutMusic "guitar strum" 9 \relative c {
+\gridPutMusic "guitar strum" 13 \relative c {
   \key e \major
   \reduceChords {
     \include "notes/guitar-V.ily"

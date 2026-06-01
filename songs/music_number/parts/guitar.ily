@@ -4,7 +4,6 @@
   \include "notes/guitar-Ib.ily"
   \include "notes/guitar-Ic.ily"
   \include "notes/guitar-Ib.ily"
-  \bar "||"
   %% \ottava #-1
   \palmMuteOn
   \repeat unfold 2 {
@@ -12,7 +11,7 @@
   }
   \palmMuteOff
   %% \ottava #0
-  \bar "||"
+  \section
 }
 
 \gridPutMusic "guitar" 3 \relative c {
@@ -23,23 +22,31 @@
     \include "notes/guitar-Id.ily"
   }
   \palmMuteOff
+  \section
 }
 
 \gridPutMusic "guitar" 5 \relative c {
   \include "notes/guitar-III.ily"
-  \bar "||"
+  \section
 }
 
 \gridPutMusic "guitar" 6 \relative c {
   \gridGetCellMusic "guitar" 3
 }
 
-\gridPutMusic "guitar" 7 \relative c {
+\gridPutMusic "guitar" 8 \relative c {
+  \gridGetCellMusic "guitar" 3
+}
+
+\gridPutMusic "guitar" 10 \relative c {
   \gridGetCellMusic "guitar" 5
 }
 
-\gridPutMusic "guitar" 8 \relative c {
-  %% \Key
+\gridPutMusic "guitar" 11 \relative c {
+  \gridGetCellMusic "guitar" 5
+}
+
+\gridPutMusic "guitar" 12 \relative c {
   \include "notes/guitar-IV.ily"
-  \bar "||"
+  \section
 }

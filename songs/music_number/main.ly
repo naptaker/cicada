@@ -7,19 +7,20 @@
 \setOption naptaker.guitar-tuning #guitar-tuning
 \setOption naptaker.paper-orientation #'portrait
 #(set! paper-alist (cons '("henle" . (cons (* 23.5 cm ) (* 31 cm))) paper-alist))
-\setOption naptaker.paper-size "letter"
+\setOption naptaker.paper-size "henle"
 \setOption naptaker.staff-size #15
 
 \include "preamble.ily"
 
 \templateInit
   #'("meta" "chords" "vox" "guitar" "guitar strum" "bass" "drums up" "drums down")
-  #'(16 4 12 4 8 12 8 12 6)
-%% A B A′ B C A′ B A′ B C C D E
+  #'(16 4 12 4 8 12 4 12 4 8  8  12 6)
+%%   A  B A′ B C A′ B A′ B C  C  D  E
+%%   1  2 3  4 5 6  7 8  9 10 11 12 13
 
 \include "parts/lyrics.ily"
 
-% \gridSetRange #'(8 . 9)
+%% \gridSetRange #'(8 . 9)
 
 ope = {
   \temporary \override Beam.color = #red
@@ -54,7 +55,9 @@ theScore = <<
 }
 
 \score {
-  \theScore
+  \new StaffGroup <<
+    \theScore
+  >>
 
   \layout {
     \context {

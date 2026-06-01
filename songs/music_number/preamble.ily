@@ -110,10 +110,10 @@
         Recordings available @
         naptaker.bandcamp.com
       }
-      \with-url #"https://github.com/naptaker"
+      \with-url #"https://sr.ht/~yurrriq/naptaker/"
       \line {
         More scores available @
-        github.com/naptaker
+        "sr.ht/~yurrriq/naptaker/"
       }
       \null
       \with-url #"https://lilypond.org"
@@ -124,7 +124,7 @@
         lilypond.org
       }
       \null
-      \with-url #"https://github.com/naptaker/cicada/commits/main/songs/music_number"
+      \with-url #"https://git.sr.ht/~yurrriq/cicada/log/main/item/songs/music_number"
       \line {
         Last updated on $(strftime "%-d %B, %Y" (localtime (current-time)))
       }
@@ -139,40 +139,32 @@
   %% print-first-page-number = ##t
   inner-margin = 25\mm
   outer-margin = 15\mm
-  % evenHeaderMarkup = \markup {
-  %   \column {
-  %     \fill-line {
-  %       \null
-  %       \line {
-  %         \if \should-print-page-number
-  %         \fromproperty #'page:page-number-string
-  %       }
-  %     }
-  %   }
-  % }
-  % oddHeaderMarkup = \markup {
-  %   \column {
-  %     \fill-line {
-  %       \line {
-  %         \if \should-print-page-number
-  %         \fromproperty #'page:page-number-string
-  %       }
-  %       \null
-  %     }
-  %   }
-  % }
+%{
+  evenHeaderMarkup = \markup {
+    \column {
+      \fill-line {
+        \null
+        \line {
+          \if \should-print-page-number
+          \fromproperty #'page:page-number-string
+        }
+      }
+    }
+  }
+  oddHeaderMarkup = \markup {
+    \column {
+      \fill-line {
+        \line {
+          \if \should-print-page-number
+          \fromproperty #'page:page-number-string
+        }
+        \null
+      }
+    }
+  }
+%}
 }
 
 Key = { \key gis \minor }
 Tempo = { \tempo "Vivace" 4 = 160 }
 global = { \Tempo \defaultTimeSignature \time 4/4 }
-
-startOops = {
-  \temporary \override NoteHead.color = #red
-  \temporary \override Stem.color = #red
-}
-
-endOops = {
-  \revert NoteHead.color
-  \revert Stem.color
-}
